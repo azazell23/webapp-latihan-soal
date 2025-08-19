@@ -1,0 +1,262 @@
+*, body, html {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-header-logo {
+  width: 42px;
+  height: 55px;
+}
+
+.icon-dashboard {
+  width: 25px;
+  height: 22px;
+}
+
+.icon-search {
+  width: 16px;
+  height: 15px;
+  margin-left: 5px;
+  margin-right: 4px;
+}
+
+.icon-myPractice {
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  margin-right: 2px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+}
+
+/* sidebar */
+.sidebar {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 290px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e4e4e4;
+}
+
+.list-menu {
+  list-style-type: none;
+}
+
+/* style logo header */
+.header-logo {
+  display: flex;
+  font-weight: 400; 
+  width: 186px;
+  height: 57px;
+  align-items: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 0px 10px;
+  margin-bottom: 57px;
+}
+
+.header-logo>.icon-header-logo {
+  margin-right: 6px;
+}
+
+/* style sidebar: list menu */
+.sidebar-list-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-list-menu>ul>a>img {
+  padding-right: 14px;
+}
+
+/* style box menu */
+
+/* DASHBOARD */
+.list-main-dashboard {
+  font-size: 16px;
+  color: #6a6a6a;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 5px;
+  height: 58px;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.list-main-dashboard:hover {
+  background-color: #ecf1ff;
+  color: #2c62ee;
+}
+
+.list-main-dashboard:hover img {
+  content: url("assets/img/VecDashboardHover.svg");
+}
+
+.list-main-dashboard:active {
+  background-color: #2c62ee;
+  color: #2c62ee;
+}
+
+/* SEARCH */
+.list-main-search {
+  font-size: 16px;
+  color: #6a6a6a;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 5px;
+  height: 58px;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.list-main-search:hover {
+  background-color: #ecf1ff;
+  color: #2c62ee;
+}
+
+.list-main-search:hover img {
+  content: url("assets/img/VecSearchHover.svg");
+}
+
+.list-main-search:active {
+  background-color: #2c62ee;
+  color: #2c62ee;
+}
+
+
+/* MY PRACTICE */
+.list-main-myPractice {
+  font-size: 16px;
+  color: #6a6a6a;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 5px;
+  height: 58px;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.list-main-myPractice:hover {
+  background-color: #ecf1ff;
+  color: #2c62ee;
+}
+
+.list-main-myPractice:hover img {
+  content: url("img/VecMyPracticeHover.svg");
+}
+
+.list-main-myPractice:active {
+  background-color: #2c62ee;
+  color: #2c62ee;
+}
+
+/* sampai disini konten menu */
+
+.icon-notif {
+  height: 27px;
+  width: 26px;
+}
+
+/* navigasi */
+.navigasi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  background-color: #2c62ee;
+}
+
+.header-nav {
+  font-size: 28px;
+  font-weight: 600;
+  justify-content: start;
+  color: #ffffff;
+  padding: 12px 0 0 12px;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-right: 20px;
+    
+}
+
+.sign-up {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2c62ee;
+    margin-right: 40px;
+}
+
+.sign-up:hover {
+    background-color: #2c62ee;
+    color: #ffffff;
+    transition: all ease-in-out 0.2s;
+}
+
+.sign-up:active {
+    background: #2c62ee;
+    opacity: 0.7;
+    transition: all ease-in-out 0.2s;
+}
+
+.sign-in {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2c62ee;
+}
+
+.sign-in:hover {
+    background-color: #2c62ee;
+    color: #ffffff;
+    transition: all ease-in-out 0.2s;
+}
+
+.sign-in:active {
+    background: #2c62ee;
+    opacity: 0.7;
+    transition: all ease-in-out 0.2s;
+}
