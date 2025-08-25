@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Hub</title>
-    <link rel="stylesheet" href="{{ asset('build/assets/css/style_page_sign_in.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset ('build/assets/img/logo_practice_hub.png') }}"></link>
+    <link rel="stylesheet" href="{{ asset('build/assets/css/style_page_sign_up.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('build/assets/img/logo_practice_hub.png') }}"></link>
 
     <!-- font google! -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,33 +14,31 @@
 </head>
 <body>
     <div class="header-logo">
-        <img src="{{ asset ('build/assets/img/logo_practice_hub-removebg-preview.png') }}" alt="" class="icon-header-logo">
+        <img src="{{ asset('build/assets/img/logo_practice_hub-removebg-preview.png') }}" alt="" class="icon-header-logo">
         <span class="header-name"><strong>pratice hub</strong></span>
     </div>
-    
+
     <div class="container">
-        
         <div class="form-box" id="login-form">
-            <form action="{{ asset('dashboard.blade.php') }}">
-                <p class="header-login">log in</p>
+            <form action="{{ route('authSignup') }}" method="POST">
+                @csrf   
+                <p class="header-sign-up">create an account</p>
                 <div class="input-user">
-                    <input type="email" class="input-username" name="email" id="username" requireed placeholder="Username or Email">
+                    <input type="username" class="input-username" name="username" id="username" required placeholder="Username">
+                    <input type="email" class="input-email" name="email" id="email" required placeholder="Email">
                     <input type="password" class="input-password" name="password" id="password"  required placeholder="Password">
-                    <div class="forg-pass">
-                        <a href="{{ asset('') }}">Forgot Password?</a>
-                    </div>
+                    <input type="password" class="input-conf-pass" name="password_confirmation" id="confirm-password" required placeholder="Confirm Password">
                 </div>
 
-                
-                <a href="{{ asset('') }}"><button type="submit" name="login" class="btn-login">Login</button></a>
-                <p class="part-sign-up">Don't have an account? <a href="{{ asset('page_sign_up.blade.php') }}">Sign Up</a></p>
+        
+                <button type="submit" name="login" class="btn-sign-up">Continue</button>
+                <p class="part-log-in">Already Have an Account? <a href="{{ route('showLogin') }}">Log In</a></p>
                 <!-- <div class="terms">
                     <p>By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
                 </div> -->
             </form>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    
 </body>
 </html>

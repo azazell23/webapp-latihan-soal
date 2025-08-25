@@ -42,10 +42,10 @@
                 <p class="header-nav">Hii, Selamat Datang!</span></p>
             </div>
             <div class="sign">
-                <a href="{{ asset('page_sign_up.blade.php') }}" class="sign-up">
+                <a href="{{ route('showSignup') }}" class="sign-up">
                     <p>Sign Up</p>
                 </a>
-                <a href="{{ asset('page_sign_in.blade.php') }}" class="sign-in">
+                <a href="{{ route('showLogin') }}" class="sign-in">
                     <p>Sign In</p>
                 </a>
             </div>

@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
     ];
@@ -44,4 +44,18 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected static function booted(): void
+    {
+        static::creating(function ($user) {
+            $year = date('y');
+
+            $lastUser = static::query()->latest('id')->first();
+            $nextId = $lastUser ? $lastUser->id + 1 : 1;
+
+            $paddedId = str_pad($nextId, 4, '0', STR_PAD_LEFT);
+            $user->user_id = $year . $paddedId;
+        });
+    }
+
 }

@@ -23,7 +23,7 @@
             <div class="sidebar-list-menu">
                 <ul class="list-menu">
                     <a href="#" class="list-main-dashboard">
-                        <img src="{{ asset('build/assets/img/VecDashboard.svg') }]" alt="" class="icon-dashboard">
+                        <img src="{{ asset('build/assets/img/VecDashboard.svg') }}" alt="" class="icon-dashboard">
                         <p>Dashboard</p>
                     </a>
                     <a href="#" class="list-main-search">
@@ -57,7 +57,7 @@
                 <div class="sub-menu">
                     <div class="sub-menu-main">
                         <div class="user-info">
-                            <img src="{{ asset('build/assets/img/VecProfile.svg') }]">
+                            <img src="{{ asset('build/assets/img/VecProfile.svg') }}">
                             <span>sih kecap manis</span>
                         </div>
                     </div>
@@ -66,6 +66,12 @@
 
         </nav>
     </div>
+
+    <!-- Temporary Log Out -->
+    <form action="{{ route('authLogout') }}" method="POST">
+        @csrf
+        <button type="submit">Log Out</button>
+    </form>
 
     <script src="script.js"></script>
 </body>

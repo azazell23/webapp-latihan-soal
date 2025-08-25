@@ -132,7 +132,7 @@
 
 .part-log-in {
   text-align: center;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .part-log-in>a {
